@@ -1,0 +1,214 @@
+CREATE INDEX user_index
+ON user (name,user_type_id,company_name,mobile, state_id,district_id,city_id,zipcode,referral_code,firebase_token,token,status,profile_update,created_at,updated_at,lamguage,user_type);
+
+CREATE INDEX idx_user
+ON user (name,user_type_id,mobile, state_id,district_id,city_id,zipcode,referral_code,firebase_token(1500),token,status,profile_update,created_at,updated_at,lamguage,user_type);
+
+SHOW INDEX FROM user
+
+CREATE INDEX idx_mobile ON user (mobile);
+CREATE INDEX idx_email ON user (email);
+CREATE INDEX idx_name ON user (name);
+CREATE INDEX idx_user_type_id ON user (user_type_id);
+CREATE INDEX idx_state_id ON user (state_id);
+CREATE INDEX idx_district_id ON user (district_id);
+CREATE INDEX idx_city_id ON user (city_id);
+CREATE INDEX idx_zipcode ON user (zipcode);
+CREATE INDEX idx_referral_code ON user (referral_code);
+CREATE INDEX idx_firebase_token ON user (firebase_token);
+CREATE INDEX idx_token ON user (token);
+CREATE INDEX idx_status ON user (status);
+CREATE INDEX idx_profile_update ON user (profile_update);
+CREATE INDEX idx_created_at ON user (created_at);
+CREATE INDEX idx_updated_at ON user (updated_at);
+CREATE INDEX idx_lamguage ON user (lamguage);
+CREATE INDEX idx_user_type ON user (user_type);
+
+
+CREATE INDEX tractor_id ON tractor (id);
+CREATE INDEX tractor_category_id ON tractor (category_id);
+CREATE INDEX tractor_user_id ON tractor (user_id);
+CREATE INDEX tractor_set ON tractor (set);
+CREATE INDEX tractor_type ON tractor (type);
+CREATE INDEX tractor_brand_id ON tractor (brand_id);
+CREATE INDEX tractor_model_id ON tractor (model_id);
+CREATE INDEX tractor_year_of_purchase ON tractor (year_of_purchase);
+CREATE INDEX tractor_title ON tractor (title);
+CREATE INDEX tractor_price ON tractor (price);
+CREATE INDEX tractor_rent_type ON tractor (rent_type);
+CREATE INDEX tractor_state_id ON tractor (state_id);
+CREATE INDEX tractor_district_id ON tractor (district_id);
+CREATE INDEX tractor_city_id ON tractor (city_id);
+CREATE INDEX tractor_pincode ON tractor (pincode);
+CREATE INDEX tractor_status ON tractor (status);
+CREATE INDEX gv_created_at ON tractor (created_at);
+CREATE INDEX gv_updated_at ON tractor (updated_at);
+
+CREATE INDEX gv_category_id ON goods_vehicle (category_id);
+CREATE INDEX gv_user_id ON goods_vehicle (user_id);
+CREATE INDEX gv_type ON goods_vehicle (type);
+CREATE INDEX gv_brand_id ON goods_vehicle (brand_id);
+CREATE INDEX gv_model_id ON goods_vehicle (model_id);
+CREATE INDEX gv_year_of_purchase ON goods_vehicle (year_of_purchase);
+CREATE INDEX gv_title ON goods_vehicle (title);
+CREATE INDEX gv_price ON goods_vehicle (price);
+CREATE INDEX gv_rent_type ON goods_vehicle (rent_type);
+CREATE INDEX gv_pincode ON goods_vehicle (pincode);
+CREATE INDEX gv_state_id ON goods_vehicle (state_id);
+CREATE INDEX gv_district_id ON goods_vehicle (district_id);
+CREATE INDEX gv_city_id ON goods_vehicle (city_id);
+CREATE INDEX gv_status ON goods_vehicle (status);
+CREATE INDEX gv_created_at ON goods_vehicle (created_at);
+CREATE INDEX gv_updated_at ON goods_vehicle (updated_at);
+
+CREATE INDEX harvester_category_id ON harvester (category_id);
+CREATE INDEX harvester_user_id ON harvester (user_id);
+CREATE INDEX harvester_type ON harvester (type);
+CREATE INDEX harvester_brand_id ON harvester (brand_id);
+CREATE INDEX harvester_model_id ON harvester (model_id);
+CREATE INDEX harvester_year_of_purchase ON harvester (year_of_purchase);
+CREATE INDEX harvester_title ON harvester (title);
+CREATE INDEX harvester_price ON harvester (price);
+CREATE INDEX harvester_rent_type ON harvester (rent_type);
+CREATE INDEX harvester_pincode ON harvester (pincode);
+CREATE INDEX harvester_state_id ON harvester (state_id);
+CREATE INDEX harvester_district_id ON harvester (district_id);
+CREATE INDEX harvester_city_id ON harvester (city_id);
+CREATE INDEX harvester_status ON harvester (status);
+CREATE INDEX harvester_created_at ON harvester (created_at);
+CREATE INDEX harvester_updated_at ON harvester (updated_at);
+
+CREATE INDEX implements_category_id ON implements (category_id);
+CREATE INDEX implements_user_id ON implements (user_id);
+CREATE INDEX implements_type ON implements (type);
+CREATE INDEX implements_brand_id ON implements (brand_id);
+CREATE INDEX implements_model_id ON implements (model_id);
+CREATE INDEX implements_year_of_purchase ON implements (year_of_purchase);
+CREATE INDEX implements_title ON implements (title);
+CREATE INDEX implements_price ON implements (price);
+CREATE INDEX implements_rent_type ON implements (rent_type);
+CREATE INDEX implements_pincode ON implements (pincode);
+CREATE INDEX implements_state_id ON implements (state_id);
+CREATE INDEX implements_district_id ON implements (district_id);
+CREATE INDEX implements_city_id ON implements (city_id);
+CREATE INDEX implements_status ON implements (status);
+CREATE INDEX implements_created_at ON implements (created_at);
+CREATE INDEX implements_updated_at ON implements (updated_at);
+
+CREATE INDEX seeds_category_id ON seeds (category_id);
+CREATE INDEX seeds_user_id ON seeds (user_id);
+CREATE INDEX seeds_title ON seeds (title);
+CREATE INDEX seeds_price ON seeds (price);
+CREATE INDEX seeds_pincode ON seeds (pincode);
+CREATE INDEX seeds_state_id ON seeds (state_id);
+CREATE INDEX seeds_district_id ON seeds (district_id);
+CREATE INDEX seeds_city_id ON seeds (city_id);
+CREATE INDEX seeds_status ON seeds (status);
+CREATE INDEX seeds_created_at ON seeds (created_at);
+CREATE INDEX seeds_updated_at ON seeds (updated_at);
+
+CREATE INDEX pesticides_category_id ON pesticides (category_id);
+CREATE INDEX pesticides_user_id ON pesticides (user_id);
+CREATE INDEX pesticides_title ON pesticides (title);
+CREATE INDEX pesticides_price ON pesticides (price);
+CREATE INDEX pesticides_pincode ON pesticides (pincode);
+CREATE INDEX pesticides_state_id ON pesticides (state_id);
+CREATE INDEX pesticides_district_id ON pesticides (district_id);
+CREATE INDEX pesticides_city_id ON pesticides (city_id);
+CREATE INDEX pesticides_status ON pesticides (status);
+CREATE INDEX pesticides_created_at ON pesticides (created_at);
+CREATE INDEX pesticides_updated_at ON pesticides (updated_at);
+
+CREATE INDEX fertilizers_category_id ON fertilizers (category_id);
+CREATE INDEX fertilizers_user_id ON fertilizers (user_id);
+CREATE INDEX fertilizers_title ON fertilizers (title);
+CREATE INDEX fertilizers_price ON fertilizers (price);
+CREATE INDEX fertilizers_pincode ON fertilizers (pincode);
+CREATE INDEX fertilizers_state_id ON fertilizers (state_id);
+CREATE INDEX fertilizers_district_id ON fertilizers (district_id);
+CREATE INDEX fertilizers_city_id ON fertilizers (city_id);
+CREATE INDEX fertilizers_status ON fertilizers (status);
+CREATE INDEX fertilizers_created_at ON fertilizers (created_at);
+CREATE INDEX fertilizers_updated_at ON fertilizers (updated_at);
+
+
+CREATE INDEX tyres_category_id ON tyres (category_id);
+CREATE INDEX tyres_user_id ON tyres (user_id);
+CREATE INDEX tyres_type ON tyres (type);
+CREATE INDEX tyres_brand_id ON tyres (brand_id);
+CREATE INDEX tyres_model_id ON tyres (model_id);
+CREATE INDEX tyres_year_of_purchase ON tyres (year_of_purchase);
+CREATE INDEX tyres_title ON tyres (title);
+CREATE INDEX tyres_price ON tyres (price);
+CREATE INDEX tyres_pincode ON tyres (pincode);
+CREATE INDEX tyres_state_id ON tyres (state_id);
+CREATE INDEX tyres_district_id ON tyres (district_id);
+CREATE INDEX tyres_city_id ON tyres (city_id);
+CREATE INDEX tyres_status ON tyres (status);
+CREATE INDEX tyres_created_at ON tyres (created_at);
+CREATE INDEX tyres_updated_at ON tyres (updated_at);
+
+
+CREATE INDEX brand_category_id ON brand (category_id);
+CREATE INDEX brand_name ON brand (name);
+CREATE INDEX brand_status ON brand (status);
+
+CREATE INDEX model_company_id ON model (company_id);
+CREATE INDEX model_brand_id ON model (brand_id);
+CREATE INDEX model_model_name ON model (model_name);
+CREATE INDEX model_status ON model (status);
+
+CREATE INDEX city_pincode ON city (pincode);
+CREATE INDEX city_city_name ON city (city_name);
+CREATE INDEX city_state_id ON city (state_id);
+CREATE INDEX city_district_id ON city (district_id);
+
+CREATE INDEX city_district_name ON district (district_name);
+CREATE INDEX city_state_id ON district (state_id);
+CREATE INDEX city_status ON district (status);
+
+CREATE INDEX company_leads_company_id ON company_leads (company_id);
+CREATE INDEX company_leads_user_id ON company_leads (user_id);
+CREATE INDEX company_leads_call_status ON company_leads (call_status);
+CREATE INDEX company_leads_dealership_id ON company_leads (dealership_id);
+CREATE INDEX company_leads_product_id ON company_leads (product_id);
+
+CREATE INDEX company_product_category_id ON company_product (category_id);
+CREATE INDEX company_product_product_name ON company_product (product_name(1000));
+CREATE INDEX company_product_price ON company_product (price);
+CREATE INDEX company_product_status ON company_product (status);
+
+CREATE INDEX iffco_leads_user_id ON iffco_leads (user_id);
+CREATE INDEX iffco_leads_call_status ON iffco_leads (call_status);
+CREATE INDEX iffco_leads_dealership_id ON iffco_leads (dealership_id);
+CREATE INDEX iffco_leads_product_id ON iffco_leads (product_id);
+
+CREATE INDEX leads_views_user_id ON leads_views (user_id);
+CREATE INDEX leads_views_post_user_id ON leads_views (post_user_id);
+CREATE INDEX leads_views_category_id ON leads_views (category_id);
+CREATE INDEX leads_views_post_id ON leads_views (post_id);
+
+CREATE INDEX leads_view_all_user_id ON leads_view_all (user_id);
+CREATE INDEX leads_view_all_category_id ON leads_view_all (category_id);
+CREATE INDEX leads_view_all_type ON leads_view_all (type);
+CREATE INDEX leads_view_all_section ON leads_view_all (section);
+
+CREATE INDEX search_engine_search_id ON search_engine (search_id);
+CREATE INDEX search_engine_string_id ON search_engine (string_id);
+CREATE INDEX search_engine_category_id ON search_engine (category_id);
+CREATE INDEX search_engine_keyword ON search_engine (keyword);
+
+CREATE INDEX search_store_user_id ON search_store (search_id);
+CREATE INDEX search_store_category_id ON search_store (category_id);
+CREATE INDEX search_store_search_id ON search_store (search_id);
+CREATE INDEX search_store_string_id ON search_store (string_id);
+CREATE INDEX search_store_keyword ON search_store (keyword);
+
+CREATE INDEX seller_leads_user_id ON seller_leads (user_id);
+CREATE INDEX seller_leads_post_user_id ON seller_leads (post_user_id);
+CREATE INDEX seller_leads_category_id ON seller_leads (category_id);
+CREATE INDEX seller_leads_post_id ON seller_leads (post_id);
+CREATE INDEX seller_leads_calls_status ON seller_leads (calls_status);
+CREATE INDEX seller_leads_messages_status ON seller_leads (messages_status);
+
+SELECT * FROM user WHERE mobile="9098156090";
